@@ -1,12 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body{
-  background-image: radial-gradient(at 100% 0%, rgba(241, 16, 16, 0.718) 50px, transparent 70%);
+  background-color: #ffe7e7;
+  background-image: radial-gradient(at 100% 0%, rgba(241, 16, 16, 0.84) 50px, transparent 70%);
   font-family: Arial, sans-serif;
   background-repeat: no-repeat;
-
+  margin: 0;
+  min-height: 100vh;
 }
 .container {
-  padding: 20px;
-  
+  padding: 20px 14px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 .container h1 {
   text-align: center;
@@ -108,7 +121,8 @@ body{
   position: fixed;
   top: 0;
   right: -550px;
-  width: 500px;
+  width: min(100%, 500px);
+  max-width: 92vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(22px);
@@ -301,6 +315,76 @@ body{
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 18px 14px;
+  }
+
+  .container h1 {
+    font-size: 42px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .card {
+    width: min(100%, 100%);
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .ha {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .ha p {
+    font-size: 16px;
+  }
+
+  .cart-badge {
+    top: 14px;
+    right: 14px;
+  }
+
+  .sidebar {
+    width: min(100%, 92vw);
+    right: -100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+
+  .sb {
+    width: 100%;
+  }
+
+  .gh {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 12px 14px;
+    font-size: 13px;
   }
 }
 
