@@ -124,7 +124,7 @@ body{
   width: min(100%, 500px);
   max-width: 92vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.03);
+  background: #ffebeb;
   backdrop-filter: blur(22px);
   border: 1px solid rgba(255, 0, 0, 0.1);
   border-radius: 24px;
@@ -152,6 +152,7 @@ body{
   border-radius: 20px;
   /* flex-direction: column; */
   align-items: center;
+  background-color: #e0c5c5;
   justify-content: center;
   backdrop-filter: blur(32px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -161,7 +162,7 @@ body{
   width: 200px;
   height: 120px;
   position: relative;
-  left: -20px;
+  /* left: -20px;  */
   border-radius: 20px;
   object-fit: cover; 
   /* margin-right: 
@@ -357,29 +358,39 @@ body{
   }
 
   .sidebar {
-    width: min(100%, 92vw);
+    width: min(100%, 420px);
     right: -100%;
   }
 
   .cart-item {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 12px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
   }
 
   .cart-item img {
-    width: 100%;
-    height: auto;
+    width: 140px;
+    height: 130px;
     left: 0;
   }
 
   .sb {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sb > div {
+    min-width: 0;
   }
 
   .gh {
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 8px;
   }
 
   .footer {
